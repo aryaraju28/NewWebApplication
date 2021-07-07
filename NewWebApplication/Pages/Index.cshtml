@@ -1,0 +1,34 @@
+﻿@page
+@using NewWebApplication.Components
+
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<div class="text-center">
+    <h1 class="display-4">Contoso Crafts</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+@(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
+
+
+<script src="_framework/blazor.server.js"></script>
+
+
+@*<div class="card-columns">
+        @foreach (var product in Model.Products)
+        {
+    <div class="card">
+        <div class="card-img" style="background-image: url('@product.Image');">
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">
+                @product.Title
+            </h4>
+        </div>
+    </div>}
+    </div>*@
+
+
